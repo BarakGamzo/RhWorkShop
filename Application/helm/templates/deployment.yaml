@@ -17,7 +17,7 @@ spec:
     spec:
       volumes:
         - name: index-html
-            configMap:
+          configMap:
             name: '{{ .Chart.Name }}-html'
             defaultMode: 420
       containers:
