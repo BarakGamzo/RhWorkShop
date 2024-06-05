@@ -17,6 +17,6 @@ spec:
   alternateBackends:
 {{- range .Values.deployment }}
   - kind: Service
-    name: {{ .Values.name }}
-    weight: {{ .Values.weight }}
+    name: {{ .name }}
+    weight: {{ .weight }}
 {{- end }}

@@ -6,8 +6,8 @@ metadata:
 spec:
   ports:
     - protocol: TCP
-      port: {{ .Values.service.servicePort }}
-      targetPort: {{ .Values.containers.containerPort }}
+      port: 8080
+      targetPort: 8080
   selector:
 # set your user name
-    app: {{ .Chart.Name }}
+    app: user9-hello-world
