@@ -6,7 +6,7 @@ WORKDIR /tmp
 USER root
 # copy packge.json to the workdir
 COPY src/package*.json ./
-
+COPY src/html src/
 
 # install npm dependencies
 RUN npm install && npm audit fix --force
