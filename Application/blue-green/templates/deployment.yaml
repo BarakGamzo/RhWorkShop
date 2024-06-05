@@ -4,13 +4,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  labels:
-   app: {{ .name }}
- name: {{ .name }}
+   app: {{ .Values.name }}
+ name: {{ .Values.name }}
 spec:
  replicas: 1
  selector:
    matchLabels:
-     app: {{ .name }}
+     app: {{ .Values.name }}
  strategy: {}
  template:
    metadata:
@@ -19,10 +19,10 @@ spec:
    spec:
      containers:
      - image: quay.io/rhdevelopers/bgd:1.0.0
-       name: {{ .name }}
+       name: {{ .Values.name }}
        env:
        - name: COLOR
-         value: {{ .color }}
+         value: {{ .Values.color }}
        resources: {}
        securityContext:
          allowPrivilegeEscalation: false
